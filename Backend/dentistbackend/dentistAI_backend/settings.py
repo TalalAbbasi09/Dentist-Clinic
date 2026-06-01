@@ -44,7 +44,7 @@ INSTALLED_APPS = [
      # Your app
     'appointments',
     'rest_framework',
-    "corsheaders",
+    
 ]
 
 MIDDLEWARE = [
