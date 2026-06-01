@@ -42,7 +42,7 @@ const checkAvailability = async () => {
 
   try {
     const response = await fetch(
-      `http://127.0.0.1:8000/api/appointments/check-availability/?date=${formData.date}`
+      `http://https://talal9303.pythonanywhere.com/api/appointments/check-availability/?date=${formData.date}`
     );
 
     if (!response.ok) {
@@ -75,7 +75,7 @@ const checkAvailability = async () => {
     }
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/appointments/create/", {
+      const res = await fetch("http://https://talal9303.pythonanywhere.com/api/appointments/create/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

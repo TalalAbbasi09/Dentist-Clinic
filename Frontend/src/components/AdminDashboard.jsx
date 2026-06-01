@@ -31,7 +31,7 @@ export default function BookAppointment({onBack}) {
   // ----------- FETCH ALL APPOINTMENTS (FROM DATABASE) -----------
   const fetchAppointments = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/appointments/viewset/");
+      const res = await fetch("http://https://talal9303.pythonanywhere.com/api/appointments/viewset/");
       const data = await res.json();
       setAppointments(data); // set array from DB
     } catch (error) {
@@ -48,7 +48,7 @@ export default function BookAppointment({onBack}) {
     if (!window.confirm("Are you sure you want to delete this appointment?")) return;
 
     try {
-      await fetch(`http://127.0.0.1:8000/api/appointments/${id}/`, {
+      await fetch(`http://https://talal9303.pythonanywhere.com/api/appointments/${id}/`, {
     method: "DELETE", // This method tells the backend to perform the deletion
 });
       // Remove from frontend list
@@ -77,7 +77,7 @@ export default function BookAppointment({onBack}) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/appointments/check-availability/?date=${formData.date}`
+        `http://https://talal9303.pythonanywhere.com/api/appointments/check-availability/?date=${formData.date}`
       );
 
       const data = await response.json();
@@ -100,7 +100,7 @@ export default function BookAppointment({onBack}) {
     }
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/appointments/create/", {
+      const res = await fetch("http://https://talal9303.pythonanywhere.com/api/appointments/create/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
