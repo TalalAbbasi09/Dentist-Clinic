@@ -89,9 +89,9 @@ WSGI_APPLICATION = 'dentistAI_backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'DentistConnectDB',
+       'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
         'USER': 'dentist_user',
         'PASSWORD': 'dentist123',
         'HOST': 'localhost',
